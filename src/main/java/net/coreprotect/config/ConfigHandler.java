@@ -51,7 +51,7 @@ public class ConfigHandler extends Queue {
     public static String database = "database";
     public static String username = "root";
     public static String password = "";
-    public static String prefix = "co_";
+    public static String prefix = "coD_";
     public static int maximumPoolSize = 10;
 
     public static HikariDataSource hikariDataSource = null;

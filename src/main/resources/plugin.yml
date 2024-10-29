@@ -1,7 +1,7 @@
-name: CoreProtect
+name: CoreProtect-Diamond
 main: net.coreprotect.CoreProtect
 version: ${project.version}
-branch: ${project.branch}
+branch: development
 api-version: 1.13
 folia-supported: true
 website: http://coreprotect.net
@@ -12,17 +12,7 @@ description: >
 commands:
   co:
     description: Utilize the plugin
-    permission: coreprotect.co
-    permission-message: §3CoreProtect §f- You do not have permission to do that.
-    usage: /<command> <params>
-  core:
-    description: Utilize the plugin
-    permission: coreprotect.core
-    permission-message: §3CoreProtect §f- You do not have permission to do that.
-    usage: /<command> <params>
-  coreprotect:
-    description: Utilize the plugin
-    permission: coreprotect.coreprotect
+    permission: coreprotect.coD
     permission-message: §3CoreProtect §f- You do not have permission to do that.
     usage: /<command> <params>
 permissions:
