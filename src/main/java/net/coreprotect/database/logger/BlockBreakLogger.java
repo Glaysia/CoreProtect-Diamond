@@ -8,6 +8,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 
 import net.coreprotect.CoreProtect;
+import net.coreprotect.DiamondMaterials;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
@@ -66,6 +67,9 @@ public class BlockBreakLogger {
                 return;
             }
 
+            if (!DiamondMaterials.DIAMOND_MATERIALS.contains(checkType)){
+                return;
+            }
             BlockStatement.insert(preparedStmt, batchCount, time, userId, wid, x, y, z, type, data, meta, blockData, 0, 0);
         }
         catch (Exception e) {

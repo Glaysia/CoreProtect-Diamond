@@ -10,6 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
 
 import net.coreprotect.CoreProtect;
+import net.coreprotect.DiamondMaterials;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.database.statement.ItemStatement;
@@ -142,6 +143,10 @@ public class ItemLogger {
                     int z = location.getBlockZ();
                     int typeId = Util.getBlockId(item.getType().name(), true);
                     int amount = item.getAmount();
+                    
+                    if (!DiamondMaterials.DIAMOND_MATERIALS.contains(item.getType())){
+                        return;
+                    }
                     ItemStatement.insert(preparedStmt, batchCount, time, userId, wid, x, y, z, typeId, data, amount, action);
                 }
             }

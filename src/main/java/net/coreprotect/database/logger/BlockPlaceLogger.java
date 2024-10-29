@@ -8,6 +8,7 @@ import org.bukkit.Material;
 import org.bukkit.block.BlockState;
 
 import net.coreprotect.CoreProtect;
+import net.coreprotect.DiamondMaterials;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
@@ -93,6 +94,10 @@ public class BlockPlaceLogger {
             }
 
             if (event.isCancelled()) {
+                return;
+            }
+            
+            if (!DiamondMaterials.DIAMOND_MATERIALS.contains(type)){
                 return;
             }
 
